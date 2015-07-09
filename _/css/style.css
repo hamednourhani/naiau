@@ -59,22 +59,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   font-family: tahoma;
   font-size: 1.2rem;
-  line-height: 160%; }
+  line-height: 160%;
+  direction: rtl;
+  text-align: right; }
 
-/* line 16, ../components/sass/_base.scss */
+/* line 18, ../components/sass/_base.scss */
 h1 {
   overflow: hidden;
   *zoom: 1; }
 
-/* line 19, ../components/sass/_base.scss */
+/* line 21, ../components/sass/_base.scss */
 a {
   text-decoration: none;
   color: #2250DA; }
-  /* line 22, ../components/sass/_base.scss */
+  /* line 24, ../components/sass/_base.scss */
   a:hover {
     color: #dc322f; }
 
-/* line 27, ../components/sass/_base.scss */
+/* line 29, ../components/sass/_base.scss */
 p {
   margin-bottom: 10px; }
 
@@ -84,7 +86,7 @@ p {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 15, ../components/sass/_layout.scss */
+/* line 19, ../components/sass/_layout.scss */
 .layout {
   *zoom: 1;
   max-width: 61em;
@@ -100,7 +102,39 @@ p {
     display: table;
     clear: both; }
 
-/* line 178, ../components/sass/_layout.scss */
+/* line 69, ../components/sass/_layout.scss */
+header {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  *zoom: 1; }
+  /* line 75, ../components/sass/_layout.scss */
+  header .top-bar {
+    background-color: #2f2933;
+    overflow: hidden;
+    *zoom: 1; }
+  /* line 79, ../components/sass/_layout.scss */
+  header ul.top-nav {
+    width: 74.57627%;
+    float: right;
+    margin-left: 1.69492%;
+    display: inline; }
+    /* line 85, ../components/sass/_layout.scss */
+    header ul.top-nav > li.top-nav-list {
+      display: inline-block; }
+  /* line 90, ../components/sass/_layout.scss */
+  header span.top-date {
+    width: 23.72881%;
+    float: right;
+    margin-left: 1.69492%;
+    display: inline;
+    float: left;
+    margin-left: 0;
+    *margin-right: -1em;
+    display: inline; }
+
+/* line 209, ../components/sass/_layout.scss */
 footer {
   overflow: hidden;
   *zoom: 1;

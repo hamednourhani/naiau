@@ -4,6 +4,10 @@ $total-columns : 12;
 $column-width : 4em;
 $gutter-width : 1em;
 $grid-padding : $gutter-width;
+$from-direction: right;
+$omega-float : left;
+
+
 
 @include border-box-sizing;
 
@@ -63,6 +67,33 @@ $larg : 75em;
 
 //header ------------------------------------
 header {
+	width : 100%;
+	padding : 0;
+	margin : 0;
+	@include clearfix;
+
+	.top-bar{
+		background-color : $grey4;
+		@include clearfix;
+	}
+	ul.top-nav{
+		
+		@include span-columns(9,12);
+		
+		
+		
+		&>li.top-nav-list{
+			display:inline-block;
+		}
+	}
+
+	span.top-date{
+		@include span-columns(3,12);
+		@include omega;
+
+		
+
+	}
 	// img {
 	// 	width : 95%;
 	// 	margin : 2.5%;
