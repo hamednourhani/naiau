@@ -1,0 +1,31 @@
+// @import url('http://fonts.googleapis.com/css?family=Bree+Serif|MerriWeather');
+// @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+// @import "icon/*.png";
+// @include all-icon-sprites;
+
+body {
+	font-family : tahoma;
+	font-size : 1.2rem;
+	line-height : 160%;
+}
+// #{headings()}{
+// 	font-family : $font-secondary;
+// 	font-weight : normal;
+// 	@include text-shadow($base01 1px 1px);
+// }
+h1{
+	@include clearfix;
+}
+a{
+	text-decoration : none;
+	color : $blue;
+	&:hover{
+		color : $red;
+	}
+}
+
+p{
+	margin:{
+		bottom: 10px;
+	}
+}

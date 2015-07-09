@@ -1,0 +1,195 @@
+//susy setup ------------------------------------
+
+$total-columns : 12;
+$column-width : 4em;
+$gutter-width : 1em;
+$grid-padding : $gutter-width;
+
+@include border-box-sizing;
+
+$small : 30em;
+$medium : 45em;
+$larg : 75em;
+
+//content
+.layout {
+	@include container;
+	padding: 0 3%;
+
+	// .primary{
+	// 	margin:{
+	// 		top : .2em;
+	// 	}
+	// 	@include at-breakpoint($medium) {
+	// 		@include single-transition(all ,3s ,ease-out);
+	// 	  @include span-columns(8,12);
+
+	// 	  #nextmeeting {
+	// 	  	@include border-radius(20px);
+	// 	  	color : lighten($yellow, 40);
+	// 	  	margin: {
+	// 	  		bottom: 10px;
+	// 	  	}
+	// 	  	background : $cyan;
+	// 	  	padding: 0 20px 20px 20px;
+
+	// 	  	h1{
+	// 	  		color : darken($cyan ,15);
+	// 	  		border : none;
+	// 	  		text-shadow : none;
+	// 	  		margin-bottom: 20px;
+	// 	  	}
+	// 	  	a{
+	// 	  		color : $blue;
+	// 	  	}
+	// 	  }
+
+	// 	}
+	// }//primary
+
+	// //secondary ------------------------------
+	// .secondary{
+	// 	@include at-breakpoint($medium){
+	// 		@include span-columns(4 omega,12);
+	// 		font-size : 1.1rem;
+	// 		h1{
+	// 			font-size : 1.8rem;
+	// 			color : $orange;
+	// 		}
+
+	// 	}
+	// }
+}
+
+//header ------------------------------------
+header {
+	// img {
+	// 	width : 95%;
+	// 	margin : 2.5%;
+	// 	max-width : 1000px;
+	// 	margin : {
+	// 		bottom : 0;
+	// 	}
+	// }
+	// .hero{
+	// 	width :100%;
+	// 	@include at-breakpoint($medium) {
+	// 		@include single-transition(all ,3s ,ease-out);
+	// 		position: relative;
+	// 		display: block;
+	// 		widows: 100%;
+	// 		height: 450px;
+	// 		@include background(image-url('thumbnails/img-100.png'));								
+		  
+	// 	}
+	// }
+}
+
+
+
+//navigation ------------------------------------
+.navigation {
+	// background : lighten($blue, 50);
+	// ul.nav{
+	// 	@include at-breakpoint($medium){
+			
+	// 		@include horizontal-list;
+	// 	}
+	// 	li{
+	// 		i{
+	// 			color : lighten($yellow, 30);
+	// 			padding-right: .5em;
+	// 			display : inline-block;
+	// 		}
+	// 		a{
+	// 			@include transition;
+	// 			display: inline-block;
+	// 			text-decoration : none;
+	// 			padding: 5px 10px;
+	// 			color : darken($yellow, 20);
+	// 			&:hover{
+	// 				background : $red;
+	// 				@include transition;
+	// 				@include at-breakpoint($medium){
+
+	// 				}
+	// 				a{
+	// 					color : lighten($yellow,20);
+	// 				}
+	// 			}
+	// 			}
+				
+	// 		}
+	// 	}
+	}
+
+	//speakers list --------------------------------------
+	
+	// .speakerslist{
+	// 	@include single-transition (all, 0.5s ,ease-out);
+	// 	.speakers{
+	// 		img {
+	// 			@include border-radius(50%);
+	// 		}
+	// 	}
+
+	// 	@include at-breakpoint($medium){
+	// 		text-align : center;
+	// 		@include background(linear-gradient(top,darken($blue,60),$blue));
+	// 		color : rgba($violet,.5);
+	// 		overflow: hidden;
+	// 		#{headings()}{
+	// 			text-shadow: none;
+	// 			border : none;
+	// 		}
+			
+	// 		artists img{
+	// 			float : none;
+	// 			width : 40%;
+	// 			max-width : 170px;
+	// 			margin : 0 auto;
+
+	// 		}
+	// 		p{
+	// 			font-weight : 200 important;
+	// 			text-align : left;
+	// 			font-size : 0.8em;
+	// 			line-height : 0;
+	// 			@include single-transition(all ,0.5s ,ease-out);
+	// 			opacity : 0;
+	// 		}
+	// 		&:hover {
+	// 			p{
+	// 				line-height : 1.5em;
+	// 				opacity : 1;
+					
+	// 			}
+	// 		}
+	// 		.artists{
+	// 			@include span-columns(4,12);
+
+	// 		}
+	// 		.artists:nth-of-type(3){
+	// 			@include span-columns(4 omega ,12);
+	// 		}
+	// 	}
+	// }
+
+	footer{
+		@include clearfix;
+		@include background($grey4);
+		border-color:  border-color($grey1);
+		
+		
+	}
+	// .icon-twitter,
+	// .icon-google,
+	// .icon-facebook,
+	// .icon-dribble,
+	// .icon-linkdin{
+	// 	width : 64px;
+	// 	height : 64px;
+	// 	display : block;
+		
+	// 	@include single-transition(background,0.3s,ease-out);
+	// }

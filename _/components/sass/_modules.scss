@@ -1,0 +1,19 @@
+
+
+
+.box{
+	margin: 0 auto 25px;
+	border:1px-solid;
+	padding: 15px;
+	border-radius:5px;
+	em{
+		text-decoration : underline;
+	}
+}
+
+.important {
+	@include colored_box($red);
+}
+.success{
+	@include colored_box($green);
+}
