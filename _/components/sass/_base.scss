@@ -5,7 +5,7 @@
 
 body {
 	font-family : tahoma;
-	font-size : 1.2rem;
+	font-size : 1.1rem;
 	line-height : 160%;
 	direction : rtl;
 	text-align : right;
@@ -30,4 +30,8 @@ p{
 	margin:{
 		bottom: 10px;
 	}
+}
+
+.buttons{
+	line-height : 200%;
 }

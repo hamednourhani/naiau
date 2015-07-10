@@ -79,11 +79,13 @@ header {
 	ul.top-nav{
 		
 		@include span-columns(9,12);
+		@include horizontal-list;
 		
 		
 		
 		&>li.top-nav-list{
 			display:inline-block;
+			float : none;
 		}
 	}
 
@@ -94,133 +96,185 @@ header {
 		
 
 	}
-	// img {
-	// 	width : 95%;
-	// 	margin : 2.5%;
-	// 	max-width : 1000px;
-	// 	margin : {
-	// 		bottom : 0;
-	// 	}
-	// }
-	// .hero{
-	// 	width :100%;
-	// 	@include at-breakpoint($medium) {
-	// 		@include single-transition(all ,3s ,ease-out);
-	// 		position: relative;
-	// 		display: block;
-	// 		widows: 100%;
-	// 		height: 450px;
-	// 		@include background(image-url('thumbnails/img-100.png'));								
-		  
-	// 	}
-	// }
+	
+	
+}
+ul.top-nav{
+	&>li a{
+		display : inline-block;
+		line-height: 220%;
+
+	}
 }
 
+.banner {
+	@include clearfix;
+	position : relative;
+	.site-logo{
+		@include span-columns (12,12);
+		text-align : center;
+		margin : auto;
+		padding :{
+			top : 10px;
+			bottom : 10px;
+		}
+	}
+	.search-bar{
+		position : absolute;
+		left : 25%;
+		padding:{
+			top : 40px;
+		}
+		
+	}
+}
+.navigation{
+	@include clearfix;
+	background-color : $grey1;
+	ul.main-nav{
+		@include span-columns(12,12);
+		@include horizontal-list;
+		text-align : center;
 
+		&>li.nav-list{
+			display: inline-block;
+			float : none;
+		}
+		&>li a{
+			display : inline-block;
+			line-height: 350%;
+		}
 
-//navigation ------------------------------------
-.navigation {
-	// background : lighten($blue, 50);
-	// ul.nav{
-	// 	@include at-breakpoint($medium){
-			
-	// 		@include horizontal-list;
-	// 	}
-	// 	li{
-	// 		i{
-	// 			color : lighten($yellow, 30);
-	// 			padding-right: .5em;
-	// 			display : inline-block;
-	// 		}
-	// 		a{
-	// 			@include transition;
-	// 			display: inline-block;
-	// 			text-decoration : none;
-	// 			padding: 5px 10px;
-	// 			color : darken($yellow, 20);
-	// 			&:hover{
-	// 				background : $red;
-	// 				@include transition;
-	// 				@include at-breakpoint($medium){
+	}
+}
+// -------------slide area ------------------
+.importants{
+	@include clearfix;
+	.notify{
+		@include span-columns(3,12);
+		background-color : $grey1;
+	}
+	.slide-area{
+		@include span-columns(9,12);
+		@include omega;
 
-	// 				}
-	// 				a{
-	// 					color : lighten($yellow,20);
-	// 				}
-	// 			}
-	// 			}
-				
-	// 		}
-	// 	}
+	}
+}
+
+// ------------ tabs ----------------------
+.main-tab{
+	width : 100%;
+	padding:{
+		top : 30px;
+		bottom : 30px;
+	}
+}
+.news-area{
+	@include clearfix;
+	background-color : $grey1;
+	article.news{
+		@include span-columns(4,12);
+
+		.news-thumb {
+			@include clearfix;
+			width : 100%;
+			height : 200px;
+			display: inline-block;
+			margin : auto;
+			text-align: center;
+		}
+		.news-thumb img{
+			max-width : 100%;
+			margin : auto;
+		}
+	
+	}
+	article.news:nth-of-type(3n){
+		@include omega;
+	}
+}
+.notifications{
+	@include clearfix;
+	article.notify-body{
+		@include span-columns(10,12);
+		float : none;
+		display : block;
+		margin : auto;
+
+	}	
+}
+.educational-notify{
+ 	@include clearfix;
+ 	background-color : $grey1;
+
+ 	.note{
+ 		@include span-columns(10,12);
+ 		float : none;
+ 		display : block;
+ 		margin : auto;
+ 	}
+ 	a.edu-button{
+ 		@include span-columns(6,12);
+ 		@extend .buttons;
+ 	}
+ 	a.edu-button:nth-of-type(2n){
+ 		@include omega;
+ 	}
+ }
+.edu-student{
+	@include clearfix;
+	a.edu-st-button{
+		@include span-columns(6,12);
+		@extend .buttons;
+	}
+	a.edu-st-button:nth-of-type(2n){
+		@include omega;
+	}
+}
+.research{
+	@include clearfix;
+	background-color : $grey1;
+	a.research-button{
+		@include span-columns(4,12);
+		@extend .buttons;
+	}
+	a.research-button:nth-of-type(3n){
+		@include omega;
+	}
+}
+.rel-sites{
+	@include clearfix;
+	a.rel-button{
+		@include span-columns(6,12);
+		@extend .buttons;
+	}
+	a.rel-button:nth-of-type(2n){
+		@include omega;
+	}
+}
+
+.services{
+	@include clearfix;
+	background-color : $grey1;
+	.service{
+		@include span-columns(10,12);
+		float : none;
+		display : block;
+		margin : auto;
 	}
 
-	//speakers list --------------------------------------
-	
-	// .speakerslist{
-	// 	@include single-transition (all, 0.5s ,ease-out);
-	// 	.speakers{
-	// 		img {
-	// 			@include border-radius(50%);
-	// 		}
-	// 	}
-
-	// 	@include at-breakpoint($medium){
-	// 		text-align : center;
-	// 		@include background(linear-gradient(top,darken($blue,60),$blue));
-	// 		color : rgba($violet,.5);
-	// 		overflow: hidden;
-	// 		#{headings()}{
-	// 			text-shadow: none;
-	// 			border : none;
-	// 		}
-			
-	// 		artists img{
-	// 			float : none;
-	// 			width : 40%;
-	// 			max-width : 170px;
-	// 			margin : 0 auto;
-
-	// 		}
-	// 		p{
-	// 			font-weight : 200 important;
-	// 			text-align : left;
-	// 			font-size : 0.8em;
-	// 			line-height : 0;
-	// 			@include single-transition(all ,0.5s ,ease-out);
-	// 			opacity : 0;
-	// 		}
-	// 		&:hover {
-	// 			p{
-	// 				line-height : 1.5em;
-	// 				opacity : 1;
-					
-	// 			}
-	// 		}
-	// 		.artists{
-	// 			@include span-columns(4,12);
-
-	// 		}
-	// 		.artists:nth-of-type(3){
-	// 			@include span-columns(4 omega ,12);
-	// 		}
-	// 	}
-	// }
+}
 
 	footer{
 		@include clearfix;
 		@include background($grey4);
 		border-color:  border-color($grey1);
-		
+		text-align : center;
 		
 	}
-	// .icon-twitter,
-	// .icon-google,
-	// .icon-facebook,
-	// .icon-dribble,
-	// .icon-linkdin{
-	// 	width : 64px;
-	// 	height : 64px;
-	// 	display : block;
-		
+
+	// @inlcude at-breakpoint();
+	// @include single-transition();
+	// @include  horizontal-list;
 	// 	@include single-transition(background,0.3s,ease-out);
 	// }
