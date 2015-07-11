@@ -1,9 +1,80 @@
-@function border_color($color){
-	@return desaturate(darken($color,25%),50%);
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
 }
 
-@mixin colored_box($color:white) {
-	@extend .box;
+@function border_color($color){
+	@return darken($color,25%);
+}
+
+@mixin colored_box($color:white,$icon:"\f05a") {
+	max-width: 100%;
+	padding : 10px 20px;
 	background-color: $color;
 	border-color: border-color($color);
+	color : border-color($color);
+	position : relative;
+	padding-right: 50px;
+	margin :{
+		top : 10px;
+		bottom : 20px;
+		right : auto;
+		left : auto;
+	}
+	display : inline-block;
+	
+	&:before{
+		@extend .fa;
+		content: $icon;
+		font-size: 24px;
+		padding : 10px;
+		color : border-color($color);
+		position : absolute;
+		top : 4px;
+		right : 5px;
+	}
+}
+@mixin colored-button($backcolor:"#fff",$color:$grey4,$icon:"\f05a") {
+	max-width: 100%;
+	position : relative;
+	padding-right: 50px;
+	margin :{
+		top : 10px;
+		bottom : 20px;
+		right : auto;
+		left : auto;
+	}
+	display : inline-block;
+	background-color: $backcolor;
+		color : $color;
+	border-radius : 4px;
+	
+	&:before{
+		@extend .fa;
+		content: $icon;
+		font-size: 24px;
+		padding : 12px 12px;
+		position : absolute;
+		top : 0px;
+		right : 5px;
+		
+		
+	}
+	&>span{
+		padding : 7px 20px;
+		display : inline-block;
+		width : 100%;
+		max-width : 100%;
+		
+	}
+}
+@mixin colored-button-hover($backcolor:$green,$color:#fff){
+	color : $color;
+	background-color: $backcolor;
+	
 }

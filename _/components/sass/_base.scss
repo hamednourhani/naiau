@@ -41,3 +41,35 @@ img{
 .buttons{
 	line-height : 200%;
 }
+
+*:focus {
+    outline: 0;
+}
+.note {
+	@include colored-box($green);
+}
+
+.edu-button {
+	@include colored-button($grey3,#fff,"\f08d");
+}
+.edu-button:hover{
+	@include colored-button-hover($green,#fff);
+}
+.edu-st-button{
+	@include colored-button($grey3,#fff,"\f19d");
+}
+.edu-st-button:hover{
+	@include colored-button-hover($lightblue,#fff);
+}
+.research-button{
+	@include colored-button(#fff,$blue,"\f0c3");
+}
+.research-button:hover{
+	@include colored-button-hover($grey1,$blue);
+}
+.rel-button{
+	@include colored-button($navi,#fff,"\f08e");
+}
+.rel-button:hover{
+	@include colored-button-hover($grey3,#fff);
+}
