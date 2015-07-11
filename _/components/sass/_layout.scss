@@ -15,54 +15,20 @@ $small : 30em;
 $medium : 45em;
 $larg : 75em;
 
+.body-wrapper{
+	 
+	width : 66em;
+	max-width : 100%;
+	margin : auto;
+	background-color : #fff;
+	box-shadow : 0px 8px 7px 2px #ddd;
+}
 //content
 .layout {
 	@include container;
 	padding: 0 3%;
 
-	// .primary{
-	// 	margin:{
-	// 		top : .2em;
-	// 	}
-	// 	@include at-breakpoint($medium) {
-	// 		@include single-transition(all ,3s ,ease-out);
-	// 	  @include span-columns(8,12);
-
-	// 	  #nextmeeting {
-	// 	  	@include border-radius(20px);
-	// 	  	color : lighten($yellow, 40);
-	// 	  	margin: {
-	// 	  		bottom: 10px;
-	// 	  	}
-	// 	  	background : $cyan;
-	// 	  	padding: 0 20px 20px 20px;
-
-	// 	  	h1{
-	// 	  		color : darken($cyan ,15);
-	// 	  		border : none;
-	// 	  		text-shadow : none;
-	// 	  		margin-bottom: 20px;
-	// 	  	}
-	// 	  	a{
-	// 	  		color : $blue;
-	// 	  	}
-	// 	  }
-
-	// 	}
-	// }//primary
-
-	// //secondary ------------------------------
-	// .secondary{
-	// 	@include at-breakpoint($medium){
-	// 		@include span-columns(4 omega,12);
-	// 		font-size : 1.1rem;
-	// 		h1{
-	// 			font-size : 1.8rem;
-	// 			color : $orange;
-	// 		}
-
-	// 	}
-	// }
+	
 }
 
 //header ------------------------------------
@@ -71,10 +37,14 @@ header {
 	padding : 0;
 	margin : 0;
 	@include clearfix;
-
+	box-shadow : 4px 4px 0 -8px #efefef;
 	.top-bar{
-		background-color : $grey4;
+		border-bottom : 1px #ddd solid;
 		@include clearfix;
+		margin :{
+			right : 10px;
+			left : 10px;
+		}
 	}
 	ul.top-nav{
 		
@@ -89,20 +59,19 @@ header {
 		}
 	}
 
-	span.top-date{
+	.search-bar{
 		@include span-columns(3,12);
 		@include omega;
+		color : #fff;
+		
+	}
 
 		
-
-	}
-	
-	
 }
 ul.top-nav{
 	&>li a{
 		display : inline-block;
-		line-height: 220%;
+		line-height: 200%;
 
 	}
 }
@@ -110,43 +79,65 @@ ul.top-nav{
 .banner {
 	@include clearfix;
 	position : relative;
+	padding:{
+		top : 10px;
+		bottom : 10px;
+	}
+	border :{
+		bottom : 2px $lightblue solid;
+	}
+	
 	.site-logo{
-		@include span-columns (12,12);
+		@include span-columns (4,12);
 		text-align : center;
 		margin : auto;
 		padding :{
 			top : 10px;
 			bottom : 10px;
 		}
-	}
-	.search-bar{
-		position : absolute;
-		left : 25%;
-		padding:{
-			top : 40px;
+		&>img.logo{
+			max-width : 100%;
 		}
-		
 	}
-}
-.navigation{
-	@include clearfix;
-	background-color : $grey1;
+
+	span.top-date{
+		position : absolute;
+		left : 15%;
+		top : 20px;
+
+	}
 	ul.main-nav{
-		@include span-columns(12,12);
+		@include span-columns(8,12);
+		@include omega;
+		position : absolute;
+		bottom : 10px;
 		@include horizontal-list;
 		text-align : center;
 
 		&>li.nav-list{
 			display: inline-block;
 			float : none;
+			
 		}
 		&>li a{
 			display : inline-block;
-			line-height: 350%;
+			line-height: 300%;
+			border : {
+				top : 1px #ddd solid;
+			}
+
+		}
+		&>li a:hover{
+			border:{
+				top : 2px $lightblue solid;
+			}
+			
 		}
 
 	}
+	
 }
+
 // -------------slide area ------------------
 .importants{
 	@include clearfix;
@@ -157,6 +148,11 @@ ul.top-nav{
 	.slide-area{
 		@include span-columns(9,12);
 		@include omega;
+		& img.sliders{
+			max-width : 100%;
+			height : auto;
+			
+		}
 
 	}
 }

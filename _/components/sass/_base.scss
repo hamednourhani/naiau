@@ -9,6 +9,9 @@ body {
 	line-height : 160%;
 	direction : rtl;
 	text-align : right;
+	background-color : #eee;
+	max-width : 100%;
+
 }
 // #{headings()}{
 // 	font-family : $font-secondary;
@@ -20,9 +23,9 @@ h1{
 }
 a{
 	text-decoration : none;
-	color : $blue;
+	color : #737373;
 	&:hover{
-		color : $red;
+		color : $blue;
 	}
 }
 
@@ -31,7 +34,10 @@ p{
 		bottom: 10px;
 	}
 }
-
+img{
+	max-width : 100%;
+	height : auto;
+}
 .buttons{
 	line-height : 200%;
 }
